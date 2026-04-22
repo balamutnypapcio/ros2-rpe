@@ -1,0 +1,6 @@
+StateMonitor:
+  ros__parameters:
+    monitored_sensors: ["lidar","clock","motor1", "imu"]
+    timeout_period: 2.0
+    publish_period: 5.0
+    sensor_publish_period: 5.0
