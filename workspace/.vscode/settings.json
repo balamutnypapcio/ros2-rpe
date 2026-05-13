@@ -8,4 +8,10 @@
         "/opt/ros/humble/lib/python3.10/site-packages"
     ],
     "python.analysis.typeCheckingMode": "basic",
+    "cmake.ignoreCMakeListsMissing": true,
+    "folders": [
+        {
+            "path": ".."
+        }
+    ],
 }
