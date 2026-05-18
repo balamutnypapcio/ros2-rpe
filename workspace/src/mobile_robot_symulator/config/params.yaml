@@ -1,4 +1,12 @@
-MobileRobotSimulator:
-    ros__parameters:
-        linear_vel: 1.0
-        angular_vel: 0.0
+controller_node:
+  ros__parameters:
+    mode: "square"               # Execution mode: "square" or "circle"
+
+    # Square configuration parameters
+    square_side_length: 2.0      # Side length of the square [m]
+    square_linear_vel: 0.5       # Maximum linear velocity [m/s]
+    square_angular_vel: 2.5      # Maximum angular velocity [rad/s]
+
+    # Circle configuration parameters
+    circle_radius: 1.0           # Radius of the circle [m]
+    circle_linear_vel: 0.4       # Target linear velocity on the circular path [m/s]
