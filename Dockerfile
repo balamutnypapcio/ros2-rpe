@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     nano \
     vim \
     git \
+    && pip3 install scipy \
     && rm -rf /var/lib/apt/lists/*
 
 # Tworzymy folder workspace'u wewnątrz kontenera

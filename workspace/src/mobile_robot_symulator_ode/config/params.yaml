@@ -1,0 +1,28 @@
+# ============================================================
+#  Mobile Robot ODE Simulator – configuration
+# ============================================================
+
+mobile_robot_simulator_node:
+  ros__parameters:
+    # --- Dynamic model parameters ---
+    mass:        1.0    # m  [kg]
+    inertia:     0.1    # I  [kg*m^2]
+    lin_damping: 0.5    # b  (linear damping coefficient)
+    ang_damping: 0.1    # c  (angular damping coefficient)
+
+controller_node:
+  ros__parameters:
+    # --- Proportional controller gains ---
+    Kp_d:   1.1   # proportional gain for distance error
+    Kp_phi: 8.0   # proportional gain for heading error
+    Kv:     1.0   # linear velocity damping gain
+    Kw:     1.0   # angular velocity damping gain
+
+    # --- Actuator limits ---
+    F_max:   50.0  # maximum driving force [N]
+    tau_max: 8.0  # maximum steering torque [N*m]
+
+    # --- Waypoint navigation ---
+    waypoint_tolerance: 0.05  # switch to next waypoint within [m]
+    # Flat list: [x0, y0, x1, y1, ...] → square (2x2)
+    waypoints: [2.0, 0.0, 2.0, 2.0, 0.0, 2.0, 0.0, 0.0]

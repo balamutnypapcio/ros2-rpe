@@ -1,0 +1,35 @@
+from glob import glob
+from setuptools import find_packages, setup
+
+package_name = 'mobile_robot_symulator_ode'
+
+setup(
+    name=package_name,
+    version='0.0.0',
+    packages=find_packages(exclude=['test']),
+    data_files=[
+        ('share/ament_index/resource_index/packages',
+            ['resource/' + package_name]),
+        ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', glob('launch/launch.py')),
+        ('share/' + package_name + '/config', glob('config/*')),
+        ('share/' + package_name + '/urdf', glob('urdf/*.urdf')),
+    ],
+    install_requires=['setuptools'],
+    zip_safe=True,
+    maintainer='root',
+    maintainer_email='jakub21wilczynski@gmail.com',
+    description='Mobile robot simulation in ROS 2 with SciPy ODE solver',
+    license='skibidi LICENSEE',
+    extras_require={
+        'test': [
+            'pytest',
+        ],
+    },
+    entry_points={
+        'console_scripts': [
+            'controller_node = mobile_robot_symulator_ode.Controller:main',
+            'mobile_robot_simulator_node = mobile_robot_symulator_ode.MobileRobotSimulator:main',
+        ],
+    },
+)
