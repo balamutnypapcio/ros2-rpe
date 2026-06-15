@@ -1,0 +1,21 @@
+objects:
+  - name: "object_1"
+    position: [2.0, 3.0]
+    drop_position: [8.0, 1.0]
+  - name: "object_2"
+    position: [5.0, 6.0]
+    drop_position: [1.0, 7.0]
+
+start_pose: [0.0, 0.0]
+
+obstacles:
+  - name: "wall_1"
+    x: 3.5
+    y: 1.0
+    width: 1.0
+    height: 4.0
+  - name: "wall_2"
+    x: 6.0
+    y: 4.0
+    width: 2.0
+    height: 1.5
