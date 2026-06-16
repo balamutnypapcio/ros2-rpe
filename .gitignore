@@ -3,3 +3,8 @@ workspace/build/
 workspace/log/
 
 workspace/install/
+
+env/
+
+BehabioralTree/__pycache__
+
